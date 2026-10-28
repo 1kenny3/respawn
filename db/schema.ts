@@ -1,0 +1,2 @@
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+export const paymentOrders=sqliteTable('payment_orders',{id:text('id').primaryKey(),requestKey:text('request_key').notNull().unique(),owner:text('owner').notNull(),amount:integer('amount').notNull(),items:text('items').notNull(),email:text('email').notNull(),delivery:text('delivery').notNull(),status:text('status').notNull(),paymentId:text('payment_id'),paymentUrl:text('payment_url'),createdAt:integer('created_at').notNull()});
